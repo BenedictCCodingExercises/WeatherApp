@@ -11,6 +11,7 @@ import UIKit
 
 class ForecastCell: UITableViewCell {
 
+    //Sub views
     @IBOutlet var dateLabel: UILabel!
 
     @IBOutlet var summaryLabel: UILabel!

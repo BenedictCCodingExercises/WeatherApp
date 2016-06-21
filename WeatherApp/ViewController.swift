@@ -11,23 +11,23 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
 
-    var client = NetworkClient() //TODO: This should be passed in my the object that creates this object.
 
-
+    //Views
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var refreshButton: UIBarButtonItem!
 
-
+    //sub-controllers
+    var client = NetworkClient() //TODO: This should be passed in my the object that creates this object.
     private static let forecastTimeFormatter: NSDateFormatter = {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "EEE HH:mm"
         return formatter
     }()
 
+    //State
     private var isFetching = false
     private var error: ErrorType?
     private var forecasts: [Forecast]?
-
 
 
     //MARK:- Instance life cycle
@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
 
     func refreshView() {
-        //In a proper app we'd have to take the error into account too
+        //In a proper app we'd have to take the error into account too.
 
         self.refreshButton.enabled = !isFetching
         self.tableView.reloadData()
@@ -111,4 +111,3 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
 }
-
