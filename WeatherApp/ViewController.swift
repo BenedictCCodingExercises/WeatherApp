@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.title = "5 Day Forecast"
+        self.title = "London 5 Day Forecast"
     }
 
 
